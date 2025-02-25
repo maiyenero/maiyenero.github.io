@@ -3,34 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Home - Margaret Aiyenero</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <div class="logo">WELCOME</div>
-      <div class="nav-items">
-        <a href="/">Home</a> <a href="/">About</a> <a href="/">Contact</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">WELCOME</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
-    <section class="hero">
-      <div class="hero-container">
-        <div class="column-left">
-          <h1>Margaret Aiyenero</h1>
-          <p>
-           	Hello! my name is Margaret Aiyenero and I am currently a junior computer schience and political science major at the University of Notre Dame.
-          </p>
-          <button>Get Started</button>
-        </div>
-        <div class="column-right">
-          <img
-				src="./IMG_4814.jpg"
-				alt="illustration
-			"
-				class="hero-image"
-           />
-        </div>
+
+    <section class="hero text-center py-5 bg-primary text-white">
+      <div class="container">
+        <h1>Margaret Aiyenero</h1>
+        <p>I am a sophomore computer science major at the University of Notre Dame.</p>
+        <button id="emailButton" class="btn btn-light">Show My Email</button>
+        <p id="emailDisplay" class="mt-3"></p>
       </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
