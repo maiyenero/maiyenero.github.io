@@ -4,13 +4,13 @@ function toCelsius() {
     let resultParent = document.getElementById("result-parent");
     let result = document.getElementById("result");
 
-    // Remove any existing warning
+    //remove existing warning
     let currentWarning = document.getElementById("warning");
     if (currentWarning) {
         currentWarning.remove();
     }
 
-    // Check if input is a valid number
+    //valid number
     if (isNaN(input) || input.trim() === "") {
         let warning = document.createElement("div");
         warning.id = "warning";
@@ -18,17 +18,17 @@ function toCelsius() {
         warning.style.color = "red";
         warning.style.fontWeight = "bold";
 
-        // Hide result if the input is not a number
+        //hide if not number
         resultParent.style.visibility = "hidden";
 
-        // Insert warning above the result
+        //give warning about not entering num 
         resultParent.parentNode.insertBefore(warning, resultParent);
-    } else {
+    } else { //if number convert to celsius 
         // Converts the temperature to Celsius
         let celsius = (Number(input) - 32) * 5 / 9;
 
-        // Show back to the user, on the <span> element
-        result.innerText = celsius.toFixed(2); // Optionally rounds to 2 decimal places
+        //Show result back to user
+        result.innerText = celsius.toFixed(2); //round to 2 decimal places for readability 
 
         // Makes the div visible
         resultParent.style.visibility = "visible";
