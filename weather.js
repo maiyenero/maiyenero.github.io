@@ -1,27 +1,30 @@
-function toCelsius(){
+function toCelsius() {
 
-    // grabs the input from the user
-    let input =  document.getElementById("temperature").value;
+	// grabs the input from the user
+	let input =  document.getElementById("temperature").value;
 
-    //remove existing warning
-    let currentWarning = document.getElementById("warning");
-    if (currentWarning) {
-        currentWarning.remove();
-    }
+	let celsius = (Number(input) - 32) * 5 / 9; //convert to celsius 
 
-    if (isNaN(input)) {
-        document.getElementById("result").innerText = ""; // Clear any previous result
-	document.getElementById("result-parent").style.visibility = "hidden";
-        document.getElementById("result-parent").innerHTML += `<div id="warning" style="color: red; font-weight: bold;">Please input a valid number!</div>`;
-        //document.getElementById("result-parent").style.visibility = "visible";
+	//let resultParent = document.getElementById("result-parent");
+	//	let result = document.getElementById("result");
 
-    } else {
-        // Convert to Celsius and show result
-        let celsius = ((Number(input) - 32) * 5 / 9).toFixed(2);
-        document.getElementById("result").innerText = celsius;
-        document.getElementById("result-parent").style.color = "red";
-        document.getElementById("result-parent").style.fontWeight = "normal";
-        document.getElementById("result-parent").style.visibility = "visible";
-    }
+	//remove existing warning
+  // let currentWarning = document.getElementById("warning");
+ 	//  if (currentWarning) {
+      // currentWarning.remove();
+   //}
+
+  	//check if number
+   if (isNaN(celsius) {
+		document.getElementById("result-parent").innerText = "Please input a valid number!";
+		document.getElementById("result-parent").style.fontWeight = "bold";
+	} else {
+		//show to user 
+		document.getElementById("result-parent").innerText = "The temperature in Celsius is" + celsius;
+		document.getElementById("result-parent").style.color = "red";
+		document.getElementById("result-parent").style.fontWeight = "normal";
+	}
+//make the div visiable 
+	document.getElementById("result-parent").style.visibility = "visible";
+	
 }
-
